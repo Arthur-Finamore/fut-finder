@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  address: MyString
+  price: 1.5
+  field_type: MyString
+  datetime: 2023-08-10 16:11:12
+
+two:
+  address: MyString
+  price: 1.5
+  field_type: MyString
+  datetime: 2023-08-10 16:11:12
