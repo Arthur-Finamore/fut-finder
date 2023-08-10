@@ -1,0 +1,23 @@
+
+<div class = "index-container">
+  <div class="all-matches-cards" >
+    <% @matches.each do |match| %>
+    <%= link_to match_path(match), style: "text-decoration: none" do  %>
+        <div class="card-match index-card-match">
+          <div class="card-match-infos">
+            <div>
+            <h1> Partidas </h1>
+            <h2><%= "#{match.address} | #{match.price}"%></h2>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+
+  <div  class = "map"
+        data-controller="map"
+        data-map-markers-value="<%= @markers.to_json %>"
+        data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+  </div>
+</div>
