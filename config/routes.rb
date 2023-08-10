@@ -4,4 +4,10 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+  resources :matches do
+    resources :match_makers, only: [:new, :create]
+  end
+
+  resources :match_makers, only: [:destroy]
+
 end
